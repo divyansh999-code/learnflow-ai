@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FileText, Type, Sliders, Sparkles, AlertCircle, Upload, X, FileCheck, Brain } from 'lucide-react';
 import { Button } from '../components/Button';
 import { useStore } from '../store/store';
-import { generateQuizFromText } from '../lib/gemini';
+import { generateQuizFromText } from '../services/gemini';
 import { Difficulty } from '../types';
 import * as pdfjsLib from 'pdfjs-dist';
 import { clsx } from 'clsx';
