@@ -1,20 +1,20 @@
 import React, { useEffect } from 'react';
 import { HashRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { MotionConfig, AnimatePresence } from 'framer-motion';
-import { Layout } from './components/Layout';
-import { Landing } from './pages/Landing';
-import { Dashboard } from './pages/Dashboard';
-import { CreateQuiz } from './pages/CreateQuiz';
-import { QuizPlayer } from './pages/QuizPlayer';
-import { Results } from './pages/Results';
-import { History } from './pages/History';
-import { Settings } from './pages/Settings';
-import { Goals } from './pages/Goals';
-import { Login } from './pages/Login';
-import { Flashcards } from './pages/Flashcards';
+import { Layout } from '../components/Layout';
+import { Landing } from '../pages/Landing';
+import { Dashboard } from '../pages/Dashboard';
+import { CreateQuiz } from '../pages/CreateQuiz';
+import { QuizPlayer } from '../pages/QuizPlayer';
+import { Results } from '../pages/Results';
+import { History } from '../pages/History';
+import { Settings } from '../pages/Settings';
+import { Goals } from '../pages/Goals';
+import { Login } from '../pages/Login';
+import { Flashcards } from '../pages/Flashcards';
 import { useStore } from '../store';
-import { PageTransition } from './components/PageTransition';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
+import { PageTransition } from '../components/PageTransition';
+import { LoadingSpinner } from '../components/ui/LoadingSpinner';
 import { supabase } from './lib/supabase';
 
 const ProtectedRoute = ({ children }: { children?: React.ReactNode }) => {
