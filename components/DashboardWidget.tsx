@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RefreshCw, Minus, Plus, Box, ArrowRight, Maximize2, Minimize2 } from 'lucide-react';
 import { clsx } from 'clsx';
-import { Button } from './components/Button';
-import { LoadingSpinner } from './components/LoadingSpinner';
+import { Button } from './Button';
+import { LoadingSpinner } from './LoadingSpinner';
 import { Link } from 'react-router-dom';
 
 interface DashboardWidgetProps {
