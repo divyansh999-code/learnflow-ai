@@ -1,9 +1,9 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { Quiz, Difficulty, Question, Flashcard } from "../types";
 
-// DIRECTLY access the variable so Vite's `define` plugin can replace the string `process.env.API_KEY`.
+// DIRECTLY access the variable so Vite's `define` plugin can replace the string `import.meta.env.VITE_GEMINI_API_KEY`.
 // @ts-ignore
-const apiKey = process.env.API_KEY;
+const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
 
 // Debug logging to help identify issues (visible in browser console F12)
 console.log("Gemini API Status:", {
