@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useStore } from '../store/store';
-import { GoalCard } from '../components/ui/GoalCard';
+import { GoalCard } from '../components/GoalCard';
 import { Target, Plus, TrendingUp, Trophy, Flame, Clock, X, Check } from 'lucide-react';
 import { Button } from '../components/Button';
 import { Goal } from '../types';

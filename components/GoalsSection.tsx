@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useStore } from '../store/store';
-import { GoalCard } from './ui/GoalCard';
+import { GoalCard } from './GoalCard';
 import { Target, ArrowRight } from 'lucide-react';
-import { Button } from './ui/Button';
+import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 export const GoalsSection = () => {

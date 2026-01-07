@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useStore } from '../store/store';
-import { BadgeCard } from './ui/BadgeCard';
+import { BadgeCard } from './BadgeCard';
 import { Award } from 'lucide-react';
 
 export const Achievements = () => {

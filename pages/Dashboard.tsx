@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import { useStore } from '../store/store';
 import { Button } from '../components/Button';
-import { CircularProgress } from '../components/ui/CircularProgress';
-import { Skeleton } from '../components/ui/Skeleton';
-import { CountUp } from '../components/ui/CountUp';
-import { FlipNumber } from '../components/ui/FlipNumber';
+import { CircularProgress } from '../components/CircularProgress';
+import { Skeleton } from '../components/Skeleton';
+import { CountUp } from '../components/CountUp';
+import { FlipNumber } from '../components/FlipNumber';
 import { Trophy, Flame, Target, ArrowUpRight, ArrowDownRight, Clock, BookOpen, Plus, Sparkles, Brain, Calendar, BarChart3, CheckCircle, AlertCircle, Trash2, ChevronRight as ChevronRightIcon, List, Play, Box, LayoutGrid, LayoutList, Sun, Moon, Sunset, CloudSun, Layers } from 'lucide-react';
 import { clsx } from 'clsx';
 import { Quiz, QuizResult } from '../types';
 import confetti from 'canvas-confetti';
 import { Achievements } from '../components/Achievements';
 import { GoalsSection } from '../components/GoalsSection';
-import { DashboardWidget } from '../components/ui/DashboardWidget';
+import { DashboardWidget } from '../components/DashboardWidget';
 
 // ----------------------------------------------------------------------
 // SUB-COMPONENTS

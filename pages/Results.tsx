@@ -6,7 +6,7 @@ import { Button } from '../components/Button';
 import { QuizResult } from '../types';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 import confetti from 'canvas-confetti';
-import { Odometer } from '../components/ui/Odometer';
+import { Odometer } from '../components/Odometer';
 
 // CountUp Component (Kept for % as Odometer is better for integers usually, but we can reuse Odometer)
 // Replacing with Odometer for consistency where applicable.
