@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useSpring, useMotionValue } from 'framer-motion';
-import { Goal } from '../../types';
+import { Goal } from '../types/types';
 import { Target, Trophy, Flame, Clock, ChevronDown, Check, Star, Plus } from 'lucide-react';
 import { clsx } from 'clsx';
 import confetti from 'canvas-confetti';
-import { useStore } from '../../store';
+import { useStore } from '../store/store';
 
 const THEME_STYLES = {
   blue: {
