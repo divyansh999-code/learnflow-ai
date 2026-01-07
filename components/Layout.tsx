@@ -18,10 +18,10 @@ import {
   User,
   Layers
 } from 'lucide-react';
-import { useStore } from '../store';
+import { useStore } from '../store/store';
 import { clsx } from 'clsx';
-import { UserProfile } from './pages/UserProfile';
-import { ThemeSelector } from './ui/ThemeSelector';
+import { UserProfile } from '../pages/UserProfile';
+import { ThemeSelector } from './ThemeSelector';
 
 export const Layout = () => {
   const { theme, toggleTheme, user, logout } = useStore();
