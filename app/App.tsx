@@ -14,7 +14,7 @@ import { Login } from '../pages/Login';
 import { Flashcards } from '../pages/Flashcards';
 import { useStore } from '../store/store';
 import { PageTransition } from '../components/PageTransition';
-import { LoadingSpinner } from '../components/ui/LoadingSpinner';
+import { LoadingSpinner } from '../components/LoadingSpinner';
 import { supabase } from '../services/supabase';
 
 const ProtectedRoute = ({ children }: { children?: React.ReactNode }) => {
