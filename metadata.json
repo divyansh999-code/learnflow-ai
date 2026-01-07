@@ -1,0 +1,5 @@
+{
+  "name": "LearnFlow AI",
+  "description": "Premium AI-powered study assistant created by Divyansh, using Google Gemini to turn notes into interactive quizzes with detailed analytics.",
+  "requestFramePermissions": []
+}
