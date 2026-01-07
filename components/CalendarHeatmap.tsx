@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useStore } from '../store';
+import { useStore } from '../store/store';
 import { Check, Clock, Calendar as CalendarIcon, Zap } from 'lucide-react';
 import { clsx } from 'clsx';
 import confetti from 'canvas-confetti';

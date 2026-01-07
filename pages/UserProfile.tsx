@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useStore } from '../store';
+import { useStore } from '../store/store';
 import { Avatar } from './ui/Avatar';
 import { LevelProgress } from './ui/LevelProgress';
 import { LogOut, User, Settings, Shield, Sparkles } from 'lucide-react';

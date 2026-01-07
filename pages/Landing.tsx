@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { motion, Variants, useScroll, useMotionValueEvent, useMotionValue, useTransform, useSpring, useInView } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { BrainCircuit, Upload, Award, ChevronRight, Zap, Sparkles, Heart, FileText, CheckCircle, BarChart3, Layers, Globe, Check, Star, Trophy } from 'lucide-react';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/Button';
 import { TextScramble } from '../components/ui/TextScramble';
 import { CursorTrail } from '../components/ui/CursorTrail';
 import confetti from 'canvas-confetti';

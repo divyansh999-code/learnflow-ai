@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useStore } from '../store';
+import { useStore } from '../store/store';
 import { GoalCard } from './ui/GoalCard';
 import { Target, ArrowRight } from 'lucide-react';
 import { Button } from './ui/Button';

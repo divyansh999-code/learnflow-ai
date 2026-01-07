@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStore } from '../store';
+import { useStore } from '../store/store';
 import { Clock, CheckCircle, XCircle } from 'lucide-react';
 import { clsx } from 'clsx';
 import { CalendarHeatmap } from '../components/CalendarHeatmap';

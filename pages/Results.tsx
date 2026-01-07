@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, Link, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence, useSpring, useTransform } from 'framer-motion';
 import { Share2, RotateCcw, Home, Award, Check } from 'lucide-react';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/Button';
 import { QuizResult } from '../types';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 import confetti from 'canvas-confetti';

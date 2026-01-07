@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BrainCircuit, Mail, Lock, ArrowRight, User, Loader2, AlertCircle } from 'lucide-react';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/Button';
 import { supabase } from '../lib/supabase';
 
 export const Login = () => {

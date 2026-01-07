@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useStore } from '../store';
+import { useStore } from '../store/store';
 import { Moon, Sun, User, Save, Edit2, Check, Zap, Eye } from 'lucide-react';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/Button';
 
 export const Settings = () => {
   const { theme, toggleTheme, user, updateUser, reduceMotion, toggleReduceMotion } = useStore();

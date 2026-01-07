@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useStore } from '../store';
+import { useStore } from '../store/store';
 import { Layers, RotateCw, Play, BookOpen, Plus, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/Button';
 import { Quiz } from '../types';
 import { clsx } from 'clsx';
 

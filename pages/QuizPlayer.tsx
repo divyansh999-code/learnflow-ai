@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronLeft, CheckCircle, XCircle, Clock, Zap, RotateCw, Layers, BrainCircuit } from 'lucide-react';
-import { Button } from '../components/ui/Button';
+import { Button } from '../components/Button';
 import { Quiz, QuizResult, Flashcard } from '../types';
-import { useStore } from '../store';
+import { useStore } from '../store/store';
 import { clsx } from 'clsx';
 
 // Flashcard Component
