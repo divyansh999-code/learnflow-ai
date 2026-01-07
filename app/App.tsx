@@ -12,7 +12,7 @@ import { Settings } from './pages/Settings';
 import { Goals } from './pages/Goals';
 import { Login } from './pages/Login';
 import { Flashcards } from './pages/Flashcards';
-import { useStore } from './store';
+import { useStore } from '../store';
 import { PageTransition } from './components/PageTransition';
 import { LoadingSpinner } from './components/ui/LoadingSpinner';
 import { supabase } from './lib/supabase';

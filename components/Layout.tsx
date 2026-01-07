@@ -20,7 +20,7 @@ import {
 } from 'lucide-react';
 import { useStore } from '../store';
 import { clsx } from 'clsx';
-import { UserProfile } from './UserProfile';
+import { UserProfile } from './pages/UserProfile';
 import { ThemeSelector } from './ui/ThemeSelector';
 
 export const Layout = () => {
