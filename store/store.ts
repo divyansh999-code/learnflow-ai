@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { Quiz, QuizResult, UserStats, Badge, Goal, ThemeColor, DashboardLayout } from './types';
-import { supabase } from './lib/supabase';
+import { supabase } from '../services/supabase';
 import { Session } from '@supabase/supabase-js';
 
 interface UserProfile {
