@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnFlow - AI Study Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Poppins', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              primary: {
+                50: 'rgb(var(--color-primary-50) / <alpha-value>)',
+                100: 'rgb(var(--color-primary-100) / <alpha-value>)',
+                200: 'rgb(var(--color-primary-200) / <alpha-value>)',
+                300: 'rgb(var(--color-primary-300) / <alpha-value>)',
+                400: 'rgb(var(--color-primary-400) / <alpha-value>)',
+                500: 'rgb(var(--color-primary-500) / <alpha-value>)',
+                600: 'rgb(var(--color-primary-600) / <alpha-value>)',
+                700: 'rgb(var(--color-primary-700) / <alpha-value>)',
+                800: 'rgb(var(--color-primary-800) / <alpha-value>)',
+                900: 'rgb(var(--color-primary-900) / <alpha-value>)',
+              },
+              secondary: {
+                500: '#ec4899',
+              },
+              accent: {
+                500: '#10b981',
+              },
+              dark: {
+                900: '#0f172a',
+                800: '#1e293b',
+                700: '#334155',
+              }
+            },
+            animation: {
+              'blob': 'blob 7s infinite',
+              'shimmer': 'shimmer 2s linear infinite',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              },
+              shimmer: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Default Theme: Indigo */
+        --color-primary-50: 238 242 255;
+        --color-primary-100: 224 231 255;
+        --color-primary-200: 199 210 254;
+        --color-primary-300: 165 180 252;
+        --color-primary-400: 129 140 248;
+        --color-primary-500: 99 102 241;
+        --color-primary-600: 79 70 229;
+        --color-primary-700: 67 56 202;
+        --color-primary-800: 55 48 163;
+        --color-primary-900: 49 46 129;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      /* Premium Noise Texture */
+      .bg-noise {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        opacity: 0.03;
+        pointer-events: none;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+      .dark .bg-noise {
+        opacity: 0.05;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #475569;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+
+      /* 38. Focus Ring Animation */
+      :focus-visible {
+        outline: 3px solid rgb(var(--color-primary-500));
+        outline-offset: 5px;
+        transition: outline-offset 0.2s cubic-bezier(0.4, 0, 0.2, 1), outline-width 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease;
+        transform: scale(1.02);
+      }
+      
+      /* 39. Skeleton Shimmer Keyframes */
+      @keyframes skeleton-shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
+      }
+      .animate-skeleton-shimmer {
+        background: linear-gradient(90deg, #e5e7eb 25%, #ffffff 50%, #e5e7eb 75%);
+        background-size: 200% 100%;
+        animation: skeleton-shimmer 1.5s infinite linear;
+      }
+      .dark .animate-skeleton-shimmer {
+        background: linear-gradient(90deg, #334155 25%, #475569 50%, #334155 75%);
+        background-size: 200% 100%;
+      }
+
+      /* 40. Reduced Motion Support */
+      .reduce-motion *, 
+      .reduce-motion ::before, 
+      .reduce-motion ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 200ms !important;
+        transition-delay: 0ms !important;
+        scroll-behavior: auto !important;
+      }
+      
+      /* Ensure parallax and floating effects are disabled when reduced motion is on */
+      .reduce-motion .animate-blob,
+      .reduce-motion .animate-shimmer,
+      .reduce-motion .animate-gradient-flow,
+      .reduce-motion .animate-grid-move {
+        animation: none !important;
+        transform: none !important;
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "zustand": "https://esm.sh/zustand@^5.0.9",
+    "zustand/": "https://esm.sh/zustand@^5.0.9/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "clsx": "https://esm.sh/clsx@^2.1.1",
+    "tailwind-merge": "https://esm.sh/tailwind-merge@^3.4.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "canvas-confetti": "https://esm.sh/canvas-confetti@^1.9.4",
+    "pdfjs-dist": "https://esm.sh/pdfjs-dist@3.11.174",
+    "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@^2.89.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-R-UK0f4Z.js"></script>
+</head>
+  <body class="bg-gray-50 text-gray-900 dark:bg-dark-900 dark:text-gray-50">
+    <div class="bg-noise"></div>
+    <div id="root"></div>
+</body>
+</html>
