@@ -15,7 +15,7 @@ import { Flashcards } from '../pages/Flashcards';
 import { useStore } from '../store';
 import { PageTransition } from '../components/PageTransition';
 import { LoadingSpinner } from '../components/ui/LoadingSpinner';
-import { supabase } from './lib/supabase';
+import { supabase } from '../services/supabase';
 
 const ProtectedRoute = ({ children }: { children?: React.ReactNode }) => {
   const { isAuthenticated, isLoading } = useStore();
