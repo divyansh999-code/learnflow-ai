@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useStore } from '../../store';
-import { ThemeColor } from '../../types';
+import { useStore } from '../store/store';
+import { ThemeColor } from '../types/types';
 import { Palette } from 'lucide-react';
 import { clsx } from 'clsx';
 
