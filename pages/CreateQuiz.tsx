@@ -5,7 +5,7 @@ import { FileText, Type, Sliders, Sparkles, AlertCircle, Upload, X, FileCheck, B
 import { Button } from '../components/Button';
 import { useStore } from '../store/store';
 import { generateQuizFromText } from '../services/gemini';
-import { Difficulty } from '../types';
+import { Difficulty } from '../types/types';
 import * as pdfjsLib from 'pdfjs-dist';
 import { clsx } from 'clsx';
 
