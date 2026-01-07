@@ -12,7 +12,7 @@ import { Trophy, Flame, Target, ArrowUpRight, ArrowDownRight, Clock, BookOpen, P
 import { clsx } from 'clsx';
 import { Quiz, QuizResult } from '../types';
 import confetti from 'canvas-confetti';
-import { Achievements } from '../components/Achievements';
+import { Achievements } from './Achievements';
 import { GoalsSection } from '../components/GoalsSection';
 import { DashboardWidget } from '../components/DashboardWidget';
 
