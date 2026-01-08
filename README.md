@@ -18,12 +18,6 @@ Premium AI-powered study assistant built by Divyansh—turns your notes into int
 - Includes Flashcards, Goals, History, and Results flows.
 - Authentication + user data powered by Supabase.
 
-## Screenshots / demo (optional)
-Add when available:
-- Live demo: `https://your-link-here`
-- Walkthrough video: `https://your-link-here`
-- Screenshots: place images in `./assets` and link them here
-
 ## Tech stack
 - React + TypeScript + Vite
 - Routing: `react-router-dom` (HashRouter)
