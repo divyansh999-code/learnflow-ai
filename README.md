@@ -12,9 +12,6 @@ Turn study notes into interactive quizzes and track performance over time with a
 
 **One-liner:** Notes → Quizzes → Insights → Better scores
 
-## Demo
-- Walkthrough video: (add link)
-
 ## What it does
 - Generates quizzes from notes using Google Gemini.
 - Tracks quiz performance with analytics (Recharts).
