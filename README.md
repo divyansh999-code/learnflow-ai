@@ -8,27 +8,29 @@
 ![Gemini](https://img.shields.io/badge/Google%20Gemini-4285F4?logo=google&logoColor=white)
 <!-- badges: end -->
 
-Premium AI-powered study assistant built by Divyansh—turns your notes into interactive quizzes with detailed analytics.
+Turn study notes into interactive quizzes and track performance over time with analytics.
 
-> Notes → Quizzes → Insights → Better scores.
+**One-liner:** Notes → Quizzes → Insights → Better scores
+
+## Demo
+- Walkthrough video: (add link)
 
 ## What it does
-- Turns study notes into interactive quizzes using Google Gemini.
-- Tracks performance with analytics charts (Recharts).
-- Includes Flashcards, Goals, History, and Results flows.
-- Authentication + user data powered by Supabase.
+- Generates quizzes from notes using Google Gemini.
+- Tracks quiz performance with analytics (Recharts).
+- Includes Flashcards, Goals, History, and Results.
+- Auth + user data stored in Supabase.
 
 ## Tech stack
-- React + TypeScript + Vite
+- Frontend: React + TypeScript + Vite
 - Routing: `react-router-dom` (HashRouter)
 - State: Zustand
-- UI/UX: Framer Motion, Lucide icons, `clsx` + `tailwind-merge`
+- UI: Framer Motion, Lucide, `clsx`, `tailwind-merge`
 - AI: `@google/genai` (Gemini)
-- Files/PDF: `pdfjs-dist`
-- Backend/Auth: `@supabase/supabase-js`
+- PDF: `pdfjs-dist`
+- Backend/Auth/DB: `@supabase/supabase-js`
 
-## App structure (routes)
-Major pages/components:
+## Routes
 - Landing
 - Dashboard
 - CreateQuiz
@@ -40,39 +42,47 @@ Major pages/components:
 - Login
 - Flashcards
 
-Protected routes are gated behind auth (loading + redirect handled in `ProtectedRoute`).
+Protected routes are gated behind auth (see `ProtectedRoute`).
 
 ## Run locally
 
 ### Prerequisites
 - Node.js (LTS recommended)
 
-### Install dependencies
+### 1) Install
 ```bash
 npm install
-Environment variables
-Create .env.local in the project root.
+2) Configure environment variables
+Create a file named .env.local in the project root:
 
 bash
 GEMINI_API_KEY=your_key_here
 VITE_SUPABASE_URL=your_supabase_url
 VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-Start dev server
+3) Start dev server
 bash
 npm run dev
-Build & preview
+4) Build & preview
 Build:
 
 bash
 npm run build
-Preview production build locally:
+Preview:
 
 bash
 npm run preview
 Deployment
-This is a standard Vite static build—deployable to Netlify/Vercel/Render.
+This is a standard Vite static build.
 
-Make sure these environment variables are set in your hosting dashboard:
+Build command:
+
+bash
+npm run build
+Output directory:
+
+dist
+
+Set environment variables in your hosting dashboard:
 
 GEMINI_API_KEY
 
@@ -81,6 +91,6 @@ VITE_SUPABASE_URL
 VITE_SUPABASE_ANON_KEY
 
 Credits
-Built by Divyansh
+Built by Divyansh.
 
-Powered by Google Gemini + Supabase
+Powered by Google Gemini + Supabase.
